@@ -1465,11 +1465,11 @@ public:
 
 
 // Class TslGame.HackReporterComponent
-// 0x01C0 (0x03A0 - 0x01E0)
+// 0x0240 (0x0420 - 0x01E0)
 class UHackReporterComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x1C0];                                     // 0x01E0(0x01C0) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x240];                                     // 0x01E0(0x0240) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

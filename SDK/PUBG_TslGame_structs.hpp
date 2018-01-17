@@ -775,6 +775,27 @@ enum class EForceRefreshDummy : uint8_t
 };
 
 
+// Enum TslGame.ECheatType
+enum class ECheatType : uint8_t
+{
+	SpeedHack                      = 0,
+	SpeedHack_UE                   = 1,
+	IgnoreWall_Hit                 = 2,
+	IgnoreWall_Sight               = 3,
+	ItemPackage                    = 4,
+	HitLag                         = 5,
+	InvalidImpact                  = 6,
+	InvalidOrigin                  = 7,
+	InvalidRange                   = 8,
+	InvalidSequence                = 9,
+	InvalidAmmo                    = 10,
+	InvalidChecksum                = 11,
+	SimilarHit                     = 12,
+	DoubleKill                     = 13,
+	ECheatType_MAX                 = 14
+};
+
+
 // Enum TslGame.EHackDetectionType
 enum class EHackDetectionType : uint8_t
 {
@@ -3839,6 +3860,19 @@ struct FWuLogCharacter
 	struct FVector                                     Location;                                                 // 0x0028(0x000C) (IsPlainOldData)
 	int                                                Ranking;                                                  // 0x0034(0x0004) (ZeroConstructor, IsPlainOldData)
 	struct FString                                     AccountId;                                                // 0x0038(0x0010) (ZeroConstructor)
+};
+
+// ScriptStruct TslGame.WuLogCheat
+// 0x0090 (0x00C0 - 0x0030)
+struct FWuLogCheat : public FLogBase
+{
+	struct FWuLogCharacter                             Character;                                                // 0x0030(0x0048)
+	struct FString                                     CheatType;                                                // 0x0078(0x0010) (ZeroConstructor)
+	struct FString                                     Description;                                              // 0x0088(0x0010) (ZeroConstructor)
+	float                                              ParamFloat1;                                              // 0x0098(0x0004) (ZeroConstructor, IsPlainOldData)
+	float                                              ParamFloat2;                                              // 0x009C(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FString                                     ParamString1;                                             // 0x00A0(0x0010) (ZeroConstructor)
+	struct FString                                     ParamString2;                                             // 0x00B0(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct TslGame.WuLogHackDetection_CHKSUM2
