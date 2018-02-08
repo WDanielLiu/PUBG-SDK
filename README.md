@@ -1,1 +1,1 @@
-# PUBG-SDK v3.6.4.10
+# PUBG-SDK v3.6.10.1
