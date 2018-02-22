@@ -2362,6 +2362,13 @@ struct UStaticMeshComponent_GetLocalBounds_Params
 	struct FVector                                     Max;                                                      // (Parm, OutParm, IsPlainOldData)
 };
 
+// Function Engine.BlueprintFunctionLibrary.MakeStringAssetReference
+struct UBlueprintFunctionLibrary_MakeStringAssetReference_Params
+{
+	struct FString                                     AssetLongPathname;                                        // (Parm, ZeroConstructor)
+	struct FStringAssetReference                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
 // Function Engine.Controller.UnPossess
 struct AController_UnPossess_Params
 {
@@ -6007,13 +6014,6 @@ struct UGameUserSettings_ApplyNonResolutionSettings_Params
 // Function Engine.GameUserSettings.ApplyHardwareBenchmarkResults
 struct UGameUserSettings_ApplyHardwareBenchmarkResults_Params
 {
-};
-
-// Function Engine.BlueprintFunctionLibrary.MakeStringAssetReference
-struct UBlueprintFunctionLibrary_MakeStringAssetReference_Params
-{
-	struct FString                                     AssetLongPathname;                                        // (Parm, ZeroConstructor)
-	struct FStringAssetReference                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
 // Function Engine.GameStateBase.OnRep_SpectatorClass

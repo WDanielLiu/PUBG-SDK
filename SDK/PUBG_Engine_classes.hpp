@@ -797,6 +797,23 @@ public:
 };
 
 
+// Class Engine.BlueprintFunctionLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UBlueprintFunctionLibrary : public UObject
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Engine.BlueprintFunctionLibrary");
+		return ptr;
+	}
+
+
+	struct FStringAssetReference STATIC_MakeStringAssetReference(const struct FString& AssetLongPathname);
+};
+
+
 // Class Engine.Controller
 // 0x0068 (0x0418 - 0x03B0)
 class AController : public AActor
@@ -2594,23 +2611,6 @@ public:
 	void ApplyResolutionSettings(bool bCheckForCommandLineOverrides);
 	void ApplyNonResolutionSettings();
 	void ApplyHardwareBenchmarkResults();
-};
-
-
-// Class Engine.BlueprintFunctionLibrary
-// 0x0000 (0x0028 - 0x0028)
-class UBlueprintFunctionLibrary : public UObject
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Engine.BlueprintFunctionLibrary");
-		return ptr;
-	}
-
-
-	struct FStringAssetReference STATIC_MakeStringAssetReference(const struct FString& AssetLongPathname);
 };
 
 
